@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions: # Добавляем секцию permissions
+      contents: write  # Необходим для create-release и upload-release-asset
     steps:
       - uses: actions/checkout@v2
         with:
